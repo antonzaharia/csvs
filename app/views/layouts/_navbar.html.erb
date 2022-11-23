@@ -5,10 +5,10 @@
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Csvs</span>
     <% end %>
 
-      <% if current_user? %>
+      <% if current_user %>
         <ul class="flex bg-transparent">
           <li>
-            <%= button_to 'Sign out', session_path, method: :delete, class: 'btn btn-ghost' %>
+            <%= button_to 'Sign out', logout_path, method: :delete, class: 'btn btn-ghost' %>
           </li>
         </ul>
 
