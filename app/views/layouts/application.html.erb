@@ -11,6 +11,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <main class="container mx-auto max-w-[1200px]">
+      <header>
+        <%= render partial: 'layouts/navbar' %>
+      </header>
+      <%= yield %>
+    </main>
   </body>
 </html>
