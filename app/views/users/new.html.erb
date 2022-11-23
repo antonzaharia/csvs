@@ -1,6 +1,5 @@
 <div class="mx-auto my-10 rounded-lg shadow p-10 max-w-lg border-gray-600 border-solid border">
   <h1 class="text-center text-2xl mb-6"><%= t('.sign_up') %></h1>
-  <% puts @user %>
   <%= form_for User.new, url: users_path do |f| %>
 
     <div class="mb-6">
