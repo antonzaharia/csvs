@@ -1,0 +1,9 @@
+<section class="mx-auto my-10 rounded-lg shadow p-10 max-w-lg border-gray-600 border-solid border">
+  <%- if controller_name != 'sessions' %>
+    <%= link_to "Sign in", new_session_path, class: 'btn btn-ghost' %><br />
+  <% end %>
+
+  <%- if controller_name != 'users' %>
+    <%= link_to "Sign up", new_user_path, class: 'btn btn-ghost' %><br />
+  <% end %>
+</section>
