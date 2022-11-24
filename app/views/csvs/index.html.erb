@@ -11,7 +11,7 @@
 <% end %>
 
 <% @csvs.each do |csv| %>
-  <%= link_to csv_path(csv), class: 'flex justify-between items-center m-6 p-6 block rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:bg-gray-100 hover:bg-gray-700' do %>
+  <%= link_to csv_path(csv), id: "csv-#{csv.id}", class: 'flex justify-between items-center m-6 p-6 block rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:bg-gray-100 hover:bg-gray-700' do %>
     <div>
       <h5 class="whitespace-nowrap text-ellipsis overflow-hidden mb-2 text-2xl font-bold tracking-tight text-white"><%= "CSV #{csv.id}" %></h5>
       <p class="font-normal text-gray-400"><%= csv.books.size %> books</p>

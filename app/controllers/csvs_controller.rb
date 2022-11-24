@@ -18,18 +18,7 @@ class CsvsController < ApplicationController
     end
     # Upload the CSV to S3
     csv = current_user.csvs.create(file: params[:file])
-
-    uri = URI('https://eohs8u7hch4yian.m.pipedream.net')
-    req = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json')
-
-    req.body = {
-      'send_from': Rails.env,
-      's3_url': csv.file.url
-    }.to_json
-
-    Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') do |http|
-      http.request(req)
-    end
+    csv.send_request
 
     # Associate the books with the CSV
     books.each do  |book| 

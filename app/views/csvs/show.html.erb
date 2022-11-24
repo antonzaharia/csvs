@@ -1,6 +1,6 @@
 <div class="text-center my-10">
   <div>S3 link:</div>
-  <%= link_to 'Download', @csv.file.url %>
+  <%= link_to @csv.file.identifier, @csv.file.url %>
 </div>
 
 <div class="overflow-x-auto">
