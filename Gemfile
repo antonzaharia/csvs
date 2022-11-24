@@ -81,3 +81,7 @@ gem "carrierwave-aws", "~> 1.5"
 gem "dot_env", "~> 0.0.3"
 
 gem "fog-aws", "~> 3.15"
+
+gem "rspec", "~> 3.12"
+
+gem "rspec-rails", group: [:development, :test]
