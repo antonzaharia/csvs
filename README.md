@@ -6,18 +6,21 @@ Ruby on Rails application to show on a web page the content of a CSV file contai
 
 - [x] Build a Rails app
 - [x] Build a basic authentication system (`email`, `password`)
-- [ ] For signed in users, build a CSV uploader to S3
-- [ ] The CSV should have a model with the following attributes:
-    - [ ] user_id 
-    - [ ] book_title
-    - [ ] book_author
-    - [ ] date_published
-    - [ ] uuid (unique)
-    - [ ] publisher_name
-    - [ ] s3_url
-- [ ] Validation of the CSV (uuid uniqueness)
-- [ ] Handle the file by renaming (append the UUID) and save the url
-- [ ] Build index and show pages for the CSV model
+- [x] For signed in users, build a CSV uploader to S3
+- [x] The CSV should have a model with the following attributes:
+    - [x] user_id 
+    - [x] file
+- [x] Book model
+    - [x] title
+    - [x] author
+    - [x] date_published
+    - [x] uuid (unique)
+    - [x] publisher_name
+- [x] Validation of the CSV (book uuid uniqueness)
+- [x] Handle the file by renaming (append the UUID) and save the url
+- [x] Build index and show pages for the CSV model
+- [x] Send a notification to RequestBin with the S3 link
+- [x] Test the features
 
 ## Ruby version
 
