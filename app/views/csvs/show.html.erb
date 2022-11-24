@@ -1,2 +1,31 @@
-<h1>Csvs#show</h1>
-<p>Find me in app/views/csvs/show.html.erb</p>
+<div class="text-center my-10">
+  <div>S3 link:</div>
+  <%# <%= link_to csv.s3_url, csv.s3_link %> 
+</div>
+
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Book title</th>
+        <th>Book author</th>
+        <th>Date published</th>
+        <th>Unique identifier</th>
+        <th>Publisher name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @csv.books.each_with_index do |book, index| %>
+        <tr>
+          <th><%= index + 1 %></th>
+          <th><%= book.title %></th>
+          <td><%= book.author %></td>
+          <td><%= book.date_published %></td>
+          <td><%= book.uuid %></td>
+          <td><%= book.publisher_name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

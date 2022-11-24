@@ -24,10 +24,13 @@ class CsvsController < ApplicationController
       book.csv = csv 
       book.save
     end
+
+    redirect_to csvs_path
   rescue StandardError => e
     redirect_to csvs_path, error: e.message
   end
 
   def show
+    @csv = Csv.find(params[:id])
   end
 end

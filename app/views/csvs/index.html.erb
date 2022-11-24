@@ -4,7 +4,11 @@
   <%= form.submit 'Save', class: 'btn' %>
 <% end %>
 
-<h1 class="text-center text-2xl mt-10">All your csvs</h1>
+<% if @csvs.size > 0 %>
+  <h1 class="text-center text-2xl mt-10">All your csvs</h1>
+<% else %>
+  <h1 class="text-center text-2xl mt-10">No CSVs yet</h1>
+<% end %>
 
 <% @csvs.each do |csv| %>
   <%= link_to csv_path(csv), class: 'flex justify-between items-center m-6 p-6 block rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:bg-gray-100 hover:bg-gray-700' do %>
