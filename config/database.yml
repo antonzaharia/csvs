@@ -81,6 +81,16 @@ test:
 #
 production:
   <<: *default
-  database: csvs_production
-  username: csvs
-  password: <%= ENV["CSVS_DATABASE_PASSWORD"] %>
+  database: csvs-db
+  username: postgres
+  password: 0b9a0a99cb753aba125a05f2bd988c130b67f9f73e523450
+  hostname: csvs-db.internal
+  port: 5432
+
+
+# Postgres cluster csvs-db created
+#   Username:    postgres
+#   Password:    0b9a0a99cb753aba125a05f2bd988c130b67f9f73e523450
+#   Hostname:    csvs-db.internal
+#   Proxy Port:  5432
+#   PG Port: 5433
