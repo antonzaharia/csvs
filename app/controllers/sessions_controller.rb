@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :redirect_to_root, only: [:new, :create, :destroy]
+
   def new
   end
 
