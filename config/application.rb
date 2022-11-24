@@ -2,7 +2,8 @@ require_relative 'boot'
 
 require 'csv'
 require 'rails/all'
-
+require 'json'
+require 'net/http'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
