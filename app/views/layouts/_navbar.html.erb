@@ -8,7 +8,7 @@
       <% if current_user %>
         <ul class="flex bg-transparent">
           <li>
-            <%= link_to 'Dasboard', dashboard_path, class: 'btn btn-ghost' %>
+            <%= link_to 'Dasboard', csvs_path, class: 'btn btn-ghost' %>
           </li>
           <li>
             <%= button_to 'Sign out', logout_path, method: :delete, class: 'btn btn-ghost' %>

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.create!(user_params)
     session[:user_id] = @user.id
 
-    redirect_to dashboard_path
+    redirect_to csvs_path
   rescue ActiveRecord::RecordInvalid => e
     redirect_to new_user_path, error: e.message
   end

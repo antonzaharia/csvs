@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  get :dashboard, to: 'home#dashboard'
+  get :csvs, to: 'csvs#index'
+  post :csvs, to: 'csvs#create'
+  get 'csvs/:id', to: 'csvs#show'
 
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create]

@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if @user&.authenticate(user_params[:password])
       session[:user_id] = @user.id
 
-      redirect_to dashboard_path
+      redirect_to csvs_path
     else
       redirect_to new_session_path, error: 'Wrong email or password.'
     end
