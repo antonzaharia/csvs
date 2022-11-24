@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get :csvs, to: 'csvs#index'
   post :csvs, to: 'csvs#create'
-  get 'csvs/:id', to: 'csvs#show'
+  get 'csvs/:id', to: 'csvs#show', as: :csv
 
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create]
