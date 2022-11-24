@@ -1,6 +1,6 @@
 <%= form_with url: '/csvs', method: :post, class: 'text-center' do |form| %>
   <%= form.label :csv, "Upload a new CSV:", class: 'label block m-5' %>
-  <%= form.file_field :csv, required: true, accept: '.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel', class: 'file-input w-full max-w-xs m-3' %>
+  <%= form.file_field :file, required: true, accept: '.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel', class: 'file-input w-full max-w-xs m-3' %>
   <%= form.submit 'Save', class: 'btn' %>
 <% end %>
 

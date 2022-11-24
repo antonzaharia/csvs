@@ -75,3 +75,9 @@ group :test do
 end
 
 gem "pry", "~> 0.14.1"
+
+gem "carrierwave-aws", "~> 1.5"
+
+gem "dot_env", "~> 0.0.3"
+
+gem "fog-aws", "~> 3.15"
