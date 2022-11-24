@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_24_084856) do
     t.string "author"
     t.string "uuid"
     t.string "publisher_name"
-    t.date "data_published"
+    t.date "date_published"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["uuid"], name: "index_books_on_uuid", unique: true

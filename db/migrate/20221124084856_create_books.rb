@@ -6,7 +6,7 @@ class CreateBooks < ActiveRecord::Migration[7.0]
       t.string :author
       t.string :uuid
       t.string :publisher_name
-      t.date :data_published
+      t.date :date_published
 
       t.timestamps
     end
